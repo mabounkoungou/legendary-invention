@@ -1,4 +1,4 @@
-import {  BadgeIcon, BookOpen, GraduationCap } from 'lucide-react'
+import {  BadgeIcon, BookOpen, GraduationCap, GroupIcon, Newspaper } from 'lucide-react'
 import React from 'react'
 
 function SideNav() {
@@ -17,11 +17,21 @@ function SideNav() {
             id:3,
             name:"Tutor",
             Icon:GraduationCap
+        },
+        {
+            id:4,
+            name:"Newsletter",
+            Icon:Newspaper
+        },
+        {
+            id:5,
+            name:"Platform",
+            Icon:GroupIcon
         }
     ]
   return (
     <div className='p-5 bg-white 
-    rounded-xl h-screen m-3 '>
+    rounded-xl h-screen ml-2 mr-2 '>
             <img src="/logo.svg" alt="logo" height={170} width={80} 
             className='hover:animate-bounce mb-2 items-center ml-2'/>
 
