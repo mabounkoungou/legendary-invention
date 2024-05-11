@@ -8,6 +8,8 @@ function Courses() {
 
     <div className='col-span-2'>
 <WelcomeBanner />
+
+{/**Course list Section */}
     </div>
 
 {/* Right container */}
