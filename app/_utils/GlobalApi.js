@@ -1,6 +1,10 @@
+import { gql, request } from 'graphql-request';
+
+
+
 const MASTER_URL = "https://api-us-east-1-shared-usea1-02.hygraph.com/v2/"+process.env.NEXT_PUBLIC_HYGRAPH_API_KEY+"/master"
 
-const getAllCourseLists = async()=>{
+const getAllCourseList = async()=>{
     const query = gql`
     query MyQuery {
         courseLists {
@@ -33,5 +37,5 @@ const getAllCourseLists = async()=>{
 }
 
 export default {
-    getAllCourseLists
+    getAllCourseList
 };
