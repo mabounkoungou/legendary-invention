@@ -1,4 +1,5 @@
 import {  BadgeIcon, BookOpen, GraduationCap, GroupIcon, Newspaper } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 function SideNav() {
@@ -6,27 +7,32 @@ function SideNav() {
         {
             id:1,
             name:"All Courses",
-            Icon:BookOpen
+            Icon:BookOpen,
+            path:"/courses"
         },
         {
             id:2,
             name:"MemberShip",
-            Icon:BadgeIcon
+            Icon:BadgeIcon,
+            path:"/membership"
         },
         {
             id:3,
             name:"Tutor",
-            Icon:GraduationCap
+            Icon:GraduationCap,
+            path:"/tutor"
         },
         {
             id:4,
             name:"Newsletter",
-            Icon:Newspaper
+            Icon:Newspaper,
+            path:"/newsletter"
         },
         {
             id:5,
             name:"Platform",
-            Icon:GroupIcon
+            Icon:GroupIcon,
+            path:"/platform"
         }
     ]
   return (
@@ -38,6 +44,7 @@ function SideNav() {
             <hr className='mt-6'></hr>
             <div className='mt-8'>
             {menu.map((item,index) => (
+                <Link href={item.path}>
                 <div key={index} className='group flex gap-3 
                 mt-2 p-3 text-[20px] 
                 items-center text-gray-500 
@@ -49,6 +56,7 @@ function SideNav() {
                 <item.Icon className='group-hover:animate-bounce'/>
                 <h2>{item.name}</h2>
                 </div>
+                </Link>
               )  )}
             </div>
     </div>

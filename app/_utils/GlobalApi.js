@@ -7,7 +7,7 @@ const MASTER_URL = "https://api-us-east-1-shared-usea1-02.hygraph.com/v2/"+proce
 const getAllCourseList = async()=>{
     const query = gql`
     query MyQuery {
-      courseLists {
+      courseLists(first: 20, orderBy: createdAt_DESC) {
         author
         id
         name

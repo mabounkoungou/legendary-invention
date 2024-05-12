@@ -3,7 +3,11 @@ import React from 'react'
 
 function CourseItem({course}) {
   return (
-    <div className=' rounded-xl border mt-2 '>
+    <div className=' rounded-xl border-2 border-gray-200
+    cursor-pointer
+    hover:shadow-purple-500
+    hover:shadow-2xl
+    '>
         <Image src={course?.banner?.url} 
         width={500}
         height={150}
@@ -29,7 +33,7 @@ function CourseItem({course}) {
                <h2 className='text-[14px] text-gray-400' >Chapters </h2>
             </div>
             } 
-            <h2 className='text-[15px] ml-1' style={{ color: course?.free? 'green' : 'red' }}>
+            <h2 className='text-[15px] ml-1 rounded-sm bg-gray-300 h-fit w-fit ' style={{ color: course?.free? 'green' : 'red' }}>
                 { course?.free? 'Free' : 'Paid' }
             </h2>
         </div>

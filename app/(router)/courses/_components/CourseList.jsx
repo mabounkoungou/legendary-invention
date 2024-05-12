@@ -46,12 +46,23 @@ font-bold
 </Select>
 
       </div>
-      <div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
-        {courseList.map((item,index) =>(
+      <div className='grid grid-cols-2 md:grid-cols-3 gap-3 mt-4'>
+        {courseList?.length > 0? courseList?.map((item,index) =>(
           <div key={index}>
             <CourseItem course = {item} />
             </div>
-        ))}
+        ))
+      :
+      
+[1,2,3,4,5,6,7,8,9].map((item,index) => (
+  <div key={index} className='w-full h-[240px]
+  rounded-xl m-2 bg-primary animate-pulse
+  skeleton-shimmer'>
+    </div>
+))
+
+
+      }
       </div>
     </div>
   )
