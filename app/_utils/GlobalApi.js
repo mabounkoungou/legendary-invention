@@ -7,29 +7,57 @@ const MASTER_URL = "https://api-us-east-1-shared-usea1-02.hygraph.com/v2/"+proce
 const getAllCourseList = async()=>{
     const query = gql`
     query MyQuery {
-        courseLists {
-          author
-          id
-          name
-          description
-          demoUrl
-          chapter {
-            ... on Chapter {
-              id
-              name
-              video {
-                url
-              }
+      courseLists {
+        author
+        id
+        name
+        description
+        demoUrl
+        chapter {
+          ... on Chapter {
+            id
+            name
+            video {
+              url
             }
           }
-          banner {
-            url
-          }
-          sourceCode
-          totalChapters
-          tag
         }
+        banner {
+          url
+          bannerCourseList {
+            banner {
+              bannerCourseList {
+                banner {
+                  bannerCourseList {
+                    banner {
+                      bannerCourseList {
+                        banner {
+                          id
+                        }
+                        free
+                        paid
+                      }
+                    }
+                    free
+                    paid
+                  }
+                }
+                paid
+                free
+              }
+            }
+            free
+            paid
+          }
+        }
+        sourceCode
+        totalChapters
+        tag
+        free
+        paid
       }
+    }
+    
       
     `
     const result = await request(MASTER_URL,query);
