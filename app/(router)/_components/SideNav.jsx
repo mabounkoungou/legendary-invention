@@ -1,6 +1,8 @@
+"use client"
 import {  BadgeIcon, BookOpen, GraduationCap, GroupIcon, Newspaper } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
+import { usePathname } from 'next/navigation'
+import React, { useEffect } from 'react'
 
 function SideNav() {
     const menu = [
@@ -35,6 +37,11 @@ function SideNav() {
             path:"/platform"
         }
     ]
+    const path = usePathname();
+    useEffect(()=>{
+      console.log("path",path)
+    },[])
+    
   return (
     <div className='p-5 bg-white 
     rounded-xl h-screen ml-2 mr-2 '>
@@ -45,14 +52,15 @@ function SideNav() {
             <div className='mt-8'>
             {menu.map((item,index) => (
                 <Link href={item.path}>
-                <div key={index} className='group flex gap-3 
+                <div key={index} className={`group flex gap-3 
                 mt-2 p-3 text-[20px] 
                 items-center text-gray-500 
                 cursor-pointer hover:bg-primary
                  hover:text-white
                   hover:rounded-lg 
-                  transition-all ease-in-out duration-300
-                  '>
+                  transition-all ease-in-out duration-300 ${path.includes(item.path) &&
+                     ' rounded-lg bg-primary text-white'}`}
+                  >
                 <item.Icon className='group-hover:animate-bounce'/>
                 <h2>{item.name}</h2>
                 </div>

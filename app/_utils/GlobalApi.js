@@ -64,6 +64,25 @@ const getAllCourseList = async()=>{
     return result;
 }
 
+const getSideBanner = async() =>{
+  const query = gql`
+  query GetSideBanner {
+    sideBanners {
+      id
+      name
+      banner {
+        id
+        url
+      }
+      url
+    }
+  }
+  `
+  const result = await request(MASTER_URL,query);
+  return result;
+}
+
 export default {
-    getAllCourseList
-};
+    getAllCourseList,
+    getSideBanner
+}
