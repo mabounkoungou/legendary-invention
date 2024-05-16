@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react'
 import React from 'react'
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import { BellDot } from 'lucide-react'
 
 function Header() {

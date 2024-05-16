@@ -3,6 +3,11 @@ const nextConfig = {
     reactStrictMode:false,
     images:{
         domains:["us-east-1-shared-usea1-02.graphassets.com"],
+        remotePatterns: [ {
+            protocol: 'https',
+            hostname: 'img.clerk.com',
+            port: '',        
+          },],
     },
 };
 
