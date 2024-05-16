@@ -55,6 +55,7 @@ const getAllCourseList = async()=>{
         tag
         free
         paid
+        slug
       }
     }
     
@@ -63,6 +64,8 @@ const getAllCourseList = async()=>{
     const result = await request(MASTER_URL,query);
     return result;
 }
+
+
 
 const getSideBanner = async() =>{
   const query = gql`
@@ -73,6 +76,7 @@ const getSideBanner = async() =>{
       banner {
         id
         url
+        
       }
       url
     }
@@ -82,7 +86,38 @@ const getSideBanner = async() =>{
   return result;
 }
 
+const getCourseById = async(courseId) =>{
+  const query = gql`
+  query MyQuery {
+    courseList(where: {slug: "`+courseId+`"}) {
+      chapter {
+        ... on Chapter {
+          id
+          name
+          video {
+            url
+          }
+        }
+      }
+      demoUrl
+      description
+      free
+      id
+      name
+      slug
+      sourceCode
+      tag
+      totalChapters
+      author
+    }
+  }
+  `
+  const result = await request(MASTER_URL,query);
+  return result;
+}
+
 export default {
     getAllCourseList,
-    getSideBanner
+    getSideBanner,
+    getCourseById
 }

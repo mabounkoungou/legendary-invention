@@ -8,6 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import CourseItem from './CourseItem';
+import Link from 'next/link';
 
 
 function CourseList() {
@@ -48,9 +49,11 @@ font-bold
       </div>
       <div className='grid grid-cols-2 md:grid-cols-3 gap-3 mt-4'>
         {courseList?.length > 0? courseList?.map((item,index) =>(
+          <Link href={'/course-preview/'+item.slug}>
           <div key={index}>
             <CourseItem course = {item} />
             </div>
+            </Link>
         ))
       :
       
