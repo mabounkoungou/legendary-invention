@@ -5,7 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Legendary Innovation",
+  title: "Legendary Invention",
   description: "This learning app is created to help everybody in the domain of IT, MATHEMATICS, SCIENCE AND OTHERS...... ",
   icons: {
     icon: "/logo.svg",

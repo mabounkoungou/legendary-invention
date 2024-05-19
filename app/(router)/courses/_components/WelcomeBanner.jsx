@@ -12,7 +12,7 @@ function WelcomeBanner() {
         hover:animate-bounce
         '/>
         <div >
-            <h1 className='font-bold text-[27px]'>Welcome to <span className='text-primary'>Legendary Innovation</span></h1>
+            <h1 className='font-bold text-[27px]'>Welcome to <span className='text-primary'>Legendary Invention</span></h1>
             <h1 className='text-gray-500 text-[20px]'>Explore, Build and Learn</h1>
         </div>
     </div>
