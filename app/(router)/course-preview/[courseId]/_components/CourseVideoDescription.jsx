@@ -1,5 +1,5 @@
 import React from 'react';
-import { Skeleton } from "@/components/ui/skeleton"
+import { Skeleton } from "../../../../components/ui/skeleton"
 import VideoPlayer from './VideoPlayer';
 import CourseEnrollSection from './CourseEnrollSection';
 
