@@ -1,18 +1,10 @@
 import { SignUp } from "@clerk/nextjs";
-import Image from "next/image";
 import React from "react";
 
 export default function Page() {
   return (
-    <div className="flex h-screen overflow-hidden">
-      <div className="flex-1 bg-gray-200 p-10">
-        {/* Add your image here */}
-        <Image src="/login.jpg" 
-        width={600}
-        height={900}
-        alt="Image" className="w-full h-full object-cover" />
-      </div>
-      <div className="flex-1 p-10">
+    <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: "url('/login.jpg')" }}>
+      <div className="flex-1 flex justify-center items-center bg-white bg-opacity-75 p-10 rounded-lg shadow-lg max-w-xl mx-auto">
         <SignUp />
       </div>
     </div>
