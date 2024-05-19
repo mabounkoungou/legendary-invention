@@ -1,4 +1,4 @@
-import GlobalApi from '@/app/_utils/GlobalApi'
+import GlobalApi from '../../../_utils/GlobalApi';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
