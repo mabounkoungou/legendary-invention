@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const {user} = useUser();
+  const {user, isLoaded} = useUser();
 
   useEffect(()=>{
     if(user){
@@ -13,7 +13,7 @@ export default function Home() {
 
     }
     else{
-      router.push("/courses");
+      isLoaded && router.push("/courses");
     }
   },[user])
   return (
