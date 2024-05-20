@@ -12,43 +12,43 @@ function SideNav() {
             id:1,
             name:"Dashboard",
             Icon:LayoutGrid,
-            path:"/courses",
+            path:"/dashboard",
             auth:user
         },
         {
-          id:1,
+          id:2,
           name:"All Courses",
           Icon:BookOpen,
           path:"/courses",
-          auth:user
+          auth:true
       },
         {
-            id:2,
+            id:3,
             name:"MemberShip",
             Icon:BadgeIcon,
             path:"/membership",
-            auth:user
-        },
-        {
-            id:3,
-            name:"Tutor",
-            Icon:GraduationCap,
-            path:"/tutor",
-            auth:user
+            auth:true
         },
         {
             id:4,
-            name:"Newsletter",
-            Icon:Newspaper,
-            path:"/newsletter",
-            auth:user
+            name:"Tutor",
+            Icon:GraduationCap,
+            path:"/tutor",
+            auth:true
         },
         {
             id:5,
+            name:"Newsletter",
+            Icon:Newspaper,
+            path:"/newsletter",
+            auth:true
+        },
+        {
+            id:6,
             name:"Platform",
             Icon:GroupIcon,
             path:"/platform",
-            auth:user
+            auth:true
         }
     ]
     const path = usePathname();

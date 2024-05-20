@@ -18,7 +18,7 @@ function Header() {
     <div class='flex items-center gap-4 mt-3 sm:mt-0'>
       <BellDot class='text-primary hover:animate-bounce' />
 
-     {isLoaded && user? <UserButton afterSignOutUrl='/courses'/> :
+     {isLoaded && user? <UserButton fallbackRedirectUrl='/courses'/> :
 
      <Link href={"/sign-in"}>
       <Button class='hover:animate-bounce'>

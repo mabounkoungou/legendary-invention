@@ -18,7 +18,7 @@ export default function Home() {
   },[user])
   return (
     
-    <UserButton afterSignOutUrl="/" />
+    <UserButton fallbackRedirectUrl="/courses" />
     
 
   );
